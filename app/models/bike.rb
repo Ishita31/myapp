@@ -1,5 +1,8 @@
 class Bike < ApplicationRecord
   has_many :users
-  has_attached_file :image
-  add_attachment :posts, :image
+  validates_presence_of :name, :message => "can't be empty"
+  validates :model, length: { is: 5 }
+
+
+
 end
