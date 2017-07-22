@@ -1,0 +1,61 @@
+<%= form_with(model: bike, local: true) do |form| %>
+  <% if bike.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bike.errors.count, "error") %> prohibited this bike from being saved:</h2>
+
+      <ul>
+      <% bike.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%#= form.label :user_id %>
+    <%#= form.number_field :user_id, id: current_user.id %>
+     <%=form.hidden_field :user_id, :value => current_user.id%>
+
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :bike_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model, id: :bike_model %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.date_select :year, id: :bike_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colour %>
+    <%= form.text_field :colour, id: :bike_colour %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kms %>
+    <%= form.number_field :kms, id: :bike_kms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fuel %>
+    <%= form.text_field :fuel, id: :bike_fuel %>
+  </div>
+
+  <div class="field">
+    <%#= form.label :image %>
+    <%#= form.text_field :image, id: :bike_image %>
+    <%= form_for @post do |f| %>
+        <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
