@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 class BikesController < ApplicationController
   before_action :set_bike, only: [:show, :edit, :update, :destroy]
 
