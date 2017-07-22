@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @bike.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bike.name %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @bike.model %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @bike.year %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @bike.colour %>
+</p>
+
+<p>
+  <strong>Kms:</strong>
+  <%= @bike.kms %>
+</p>
+
+<p>
+  <strong>Fuel:</strong>
+  <%= @bike.fuel %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @bike.image %>
+</p>
+
+<%= link_to 'Edit', edit_bike_path(@bike) %> |
+<%= link_to 'Back', bikes_path %>
