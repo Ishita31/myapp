@@ -1,5 +1,5 @@
 class Bike < ApplicationRecord
-  has_many :users
+  belongs_to :user
   validates_presence_of :name, :message => "can't be empty"
   validates :model, length: { is: 5 }
 
