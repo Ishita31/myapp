@@ -1,10 +1,10 @@
 <%= form_with(model: bike, local: true) do |form| %>
   <% if bike.errors.any? %>
     <!--<div id="error_explanation">
-      <h2><%#= pluralize(bike.errors.count, "error") %> prohibited this bike from being saved:</h2>-->
+      <h2><%= pluralize(bike.errors.count, "error") %> prohibited this bike from being saved:</h2>-->
 
       <ul>
-      <% bike.errors.full_messages.each do |message| %>
+      <% bike.errors .full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -19,7 +19,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :Company %>
     <%= form.text_field :name, id: :bike_name %>
   </div>
 

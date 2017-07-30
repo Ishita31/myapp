@@ -1,13 +1,8 @@
 
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">ABout us</a></li>
-  <li><a href="#contact">PLace a bid</a></li>
-  <li><a href="#about">Contact </a></li>
-</ul>
 
-
-<h2>Log in</h2>
+<h1 align="center">Bid Bike.com </h1>
+<h3 align="center" >Register to buy used bikes at the best price</h3>
+<h2 >Log in</h2>
 
 	<div class="pic">
 	</div>
@@ -17,11 +12,20 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
-
+<img src="1.png" height= "75" width="235" style="float:right" hspace="10"/>
+<img src="1.png" height= "75" width="235" style="float:right" hspace="10"/>
+<img src="1.png" height= "75" width="235" style="float:right" hspace="10"/>
+<img src="1.png" height= "75" width="235" style="float:right" hspace="10"/>
   <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
+	<br>
+	<img src="myapp/1.png" height= "75" width="235" style="float:right" hspace="10"/>
+	<img src="1.png" height= "75" width="235" style="float:right" hspace="10"/>
+	<img src="1.png" height= "75" width="235" style="float:right" hspace="10"/>
+	<img src="1.png" height= "75" width="235" style="float:right" hspace="10"/>
+
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
@@ -34,5 +38,5 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
-
+<%= render 'common/footer'%>
 <%= render "devise/shared/links" %>
